@@ -1,0 +1,13 @@
+﻿services:
+  cbtw.api:
+    image: cbtw.api
+    build:
+      context: .
+      dockerfile: CBTW.API/Dockerfile
+
+  cbtw.api.gateway:
+    image: cbtw.api.gateway
+    build:
+      context: .
+      dockerfile: CBTW.API.Gateway/Dockerfile
+

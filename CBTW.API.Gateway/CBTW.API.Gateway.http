@@ -1,0 +1,6 @@
+@CBTW.API.Gateway_HostAddress = http://localhost:5135
+
+GET {{CBTW.API.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
