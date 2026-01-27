@@ -16,3 +16,6 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+// Gemini key was removed due to uploaded to Github Repo
+// Implement KeyVault for it
