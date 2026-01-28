@@ -1,13 +1,18 @@
 ﻿services:
   cbtw.api:
     image: cbtw.api
+    ports:
+      - "5299:5299"
+      - "7203:7203"
     build:
       context: .
       dockerfile: CBTW.API/Dockerfile
 
   cbtw.api.gateway:
     image: cbtw.api.gateway
+    ports:
+      - "5135:5135"
+      - "7049:7049"
     build:
       context: .
       dockerfile: CBTW.API.Gateway/Dockerfile
-
