@@ -4,5 +4,5 @@ namespace CBTW.API.Gateway.Abstractions.Services;
 
 public interface IBookIdentifierService
 {
-    Task<Book> IdentifyBookAsync(string input);
+    Task<IEnumerable<Book?>> IdentifyBookAsync(string input);
 }

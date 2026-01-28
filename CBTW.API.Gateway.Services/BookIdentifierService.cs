@@ -7,11 +7,11 @@ namespace CBTW.API.Gateway.Services;
 
 public class BookIdentifierService : IBookIdentifierService
 {
-    private readonly IGeminiRepository _geminiRepository;
-    
-    public BookIdentifierService(IGeminiRepository geminiRepository)
-        => _geminiRepository = geminiRepository;
+    private readonly IBookInfoRepository _bookInfoRepository;
 
-    public async Task<Book> IdentifyBookAsync(string input)
-        => await _geminiRepository.GetBookInfoAsync(input) ?? throw new BookNotFoundException();
+    public BookIdentifierService(IBookInfoRepository bookInfoRepository)
+        => _bookInfoRepository = bookInfoRepository;
+
+    public async Task<IEnumerable<Book?>> IdentifyBookAsync(string input)
+        => await _bookInfoRepository.GetBookInfoAsync(input) ?? throw new BookNotFoundException();
 }

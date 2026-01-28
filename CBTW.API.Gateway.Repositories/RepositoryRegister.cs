@@ -7,6 +7,6 @@ public static class RepositoryRegister
 {
     public static IServiceCollection RegisterRepositories(this IServiceCollection services)
     {
-        return services.AddTransient<IGeminiRepository, GeminiRepository>();
+        return services.AddTransient<IBookInfoRepository, BookInfoRepository>();
     }
 }

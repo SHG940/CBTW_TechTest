@@ -14,7 +14,7 @@ public class OpenLibraryRepository(IConfiguration config) : IOpenLibraryReposito
     {
         BaseAddress = new Uri(config["Repositories:OpenLibraryRepository:Uri"])
     };
-    
+
     public async Task<BookInfoRespose> GetBookInfoAsync(string searchString, IEnumerable<string> fields)
     {
         var uri = new Uri(string.Concat(
@@ -27,7 +27,7 @@ public class OpenLibraryRepository(IConfiguration config) : IOpenLibraryReposito
 
         return new BookInfoRespose
         {
-            BookInfo = searchResult.Docs.Select(d => new BookInfo
+            BookInfos = searchResult.Docs.Select(d => new BookInfo
             {
                 AuthorName = d.AuthorName.FirstOrDefault() ?? string.Empty,
                 FirstPublishYear =  d.FirstPublishYear,

@@ -13,16 +13,17 @@ public class BookInfoService : IBookInfoService
         _aiService = aiService;
         _openLibraryService = openLibraryService;
     }
-    
+
     public async Task<SearchBookInfoResponse> InferFromPromptAsync(Dictionary<string, string> promptValues)
     {
         var bookKeyData = await _aiService.ExtractBookInfoAsync(promptValues);
         var bookInfosFound = await _openLibraryService.GetBookInfoAsync(bookKeyData);
-        var bookInfo = bookInfosFound.BookInfo.FirstOrDefault();
-        
+        var bookInfos = bookInfosFound.BookInfos.Take(5);
+
         return new SearchBookInfoResponse
         {
-            BookInfo = bookInfo,
+            BookInfos = bookInfos,
+            MatchReason = bookKeyData.MatchReason,
         };
     }
 }

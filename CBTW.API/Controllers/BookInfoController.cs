@@ -22,6 +22,6 @@ public class BookInfoController : ControllerBase
     {
         var result = await _bookInfoService.InferFromPromptAsync(new Dictionary<string, string> { {"text", request.Text} });
         
-        return result?.BookInfo is null ? NotFound() : Ok(result);
+        return result?.BookInfos is null ? NotFound() : Ok(result);
     }
 }
