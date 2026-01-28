@@ -4,5 +4,5 @@ public class AIServiceResponse
 {
     public string InputPropmpt { get; set; }
 
-    public string Result { get; set; }
+    public BookInfo? BookInfo { get; set; }
 }

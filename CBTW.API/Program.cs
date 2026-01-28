@@ -1,3 +1,4 @@
+using CBTW.API.Repositories;
 using CBTW.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services
     .AddOpenApi()
-    .RegisterServices();
+    .RegisterServices()
+    .RegisterRepositories();
 
 var app = builder.Build();
 

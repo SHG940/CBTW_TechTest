@@ -21,12 +21,7 @@ public class GeminiController : ControllerBase
         {
             PropmtValues = new Dictionary<string, string> { {"text", request.Text} }
         });
-
-        if (result is null || result.Result == "not found")
-        {
-            return BadRequest();
-        }
         
-        return Ok(result);
+        return result?.BookInfo is null ? NotFound() : Ok(result);
     }
 }

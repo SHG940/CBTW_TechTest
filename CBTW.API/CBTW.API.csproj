@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\CBTW.API.Repositories\CBTW.API.Repositories.csproj" />
       <ProjectReference Include="..\CBTW.API.Services\CBTW.API.Services.csproj" />
     </ItemGroup>
 
