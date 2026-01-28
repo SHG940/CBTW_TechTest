@@ -18,7 +18,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
+      <ProjectReference Include="..\CBTW.API.Gateway.Repositories\CBTW.API.Gateway.Repositories.csproj" />
+      <ProjectReference Include="..\CBTW.API.Gateway.Services\CBTW.API.Gateway.Services.csproj" />
     </ItemGroup>
 
 </Project>

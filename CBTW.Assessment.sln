@@ -8,7 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API", "CBTW.API\CBTW.A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD8F5CF9-18FA-441C-AC2A-F3068B53FF7D}"
 	ProjectSection(SolutionItems) = preProject
-		compose.yaml = compose.yaml
+		docker-compose.yaml = docker-compose.yaml
+		docker-compose.override.yaml = docker-compose.override.yaml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API.Services", "CBTW.API.Services\CBTW.API.Services.csproj", "{0DE90318-71D5-49EA-89C3-485BD05AA8DC}"
@@ -28,6 +29,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API.Gateway.Services", "CBTW.API.Gateway.Services\CBTW.API.Gateway.Services.csproj", "{D1FD18E3-822A-40B5-BF05-59130C0572E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API.Gateway.Models", "CBTW.API.Gateway.Models\CBTW.API.Gateway.Models.csproj", "{C34F9E52-9E04-4CF0-BCC2-62BA31B7F2B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API.Gateway.Repositories", "CBTW.API.Gateway.Repositories\CBTW.API.Gateway.Repositories.csproj", "{897BE712-6223-473D-9631-0102D3A0D6C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +74,10 @@ Global
 		{C34F9E52-9E04-4CF0-BCC2-62BA31B7F2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C34F9E52-9E04-4CF0-BCC2-62BA31B7F2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C34F9E52-9E04-4CF0-BCC2-62BA31B7F2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{897BE712-6223-473D-9631-0102D3A0D6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897BE712-6223-473D-9631-0102D3A0D6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897BE712-6223-473D-9631-0102D3A0D6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897BE712-6223-473D-9631-0102D3A0D6C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{55059474-D497-4871-AA22-C7DEA112962C} = {70A1188B-30CE-4E69-83EE-F95839968140}
@@ -81,5 +88,6 @@ Global
 		{58B87650-F5FC-443B-940B-AE4D9E3FE96F} = {B95740F3-F389-4212-8B8C-85C34B9D681C}
 		{D1FD18E3-822A-40B5-BF05-59130C0572E9} = {B95740F3-F389-4212-8B8C-85C34B9D681C}
 		{C34F9E52-9E04-4CF0-BCC2-62BA31B7F2B6} = {B95740F3-F389-4212-8B8C-85C34B9D681C}
+		{897BE712-6223-473D-9631-0102D3A0D6C0} = {B95740F3-F389-4212-8B8C-85C34B9D681C}
 	EndGlobalSection
 EndGlobal
