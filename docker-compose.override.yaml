@@ -1,9 +1,0 @@
-services:
-  cbtw.api:
-    ports:
-      - "5299:5299"
-      - "7203:7203"
-  cbtw.api.gateway:
-    ports:
-      - "5135:5135"
-      - "7049:7049"

@@ -1,6 +1,6 @@
 ﻿using CBTW.API.Services.Utils;
 
-namespace CBTW.Services.Tests.Utils;
+namespace CBTW.API.Services.Tests.Utils;
 
 public class AiServiceUtilsTests
 {
@@ -34,7 +34,7 @@ public class AiServiceUtilsTests
     public void ReplaceValuesTest_NonExistingKey_Success()
     {
         // Arrange
-        var prompt = "{{NonKeyInDictionary}}{{postText}}";
+        const string prompt = "{{NonKeyInDictionary}}{{postText}}";
         var values = new Dictionary<string, string> { { "values", "any value" } };
 
         // Act

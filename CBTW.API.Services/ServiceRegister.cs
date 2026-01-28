@@ -6,5 +6,7 @@ namespace CBTW.API.Services;
 public static class ServiceRegister
 {
     public static IServiceCollection RegisterServices(this IServiceCollection services)
-        => services.AddScoped<IAiService, GeminiService>();
+        => services.AddScoped<IAiService, GeminiService>()
+            .AddScoped<IOpenLibraryService, OpenLibraryService>()
+            .AddScoped<IBookInfoService, BookInfoService>();
 }

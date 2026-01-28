@@ -1,6 +1,10 @@
 @CBTW.API_HostAddress = http://localhost:5299
 
-GET {{CBTW.API_HostAddress}}/api/gemini/
-Accept: application/json
+## Post to search book info by a prompt
+POST {{CBTW.API_HostAddress}}/api/BookInfoSearchBookInfo/
+Content-Type: application/json
 
+{
+  "text": "Some test text related a book with the author name, title and other info"
+}
 ###

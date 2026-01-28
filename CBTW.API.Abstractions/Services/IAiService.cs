@@ -1,8 +1,8 @@
-using CBTW.API.Abstractions.Dtos.Responses;
+using CBTW.API.Abstractions.Dtos;
 
 namespace CBTW.API.Abstractions.Services;
 
 public interface IAiService
 {
-    Task<SearchBookInfoResponse> CallAsync(Dictionary<string, string> promptValues);
+    Task<AIBookResult> ExtractBookInfoAsync(Dictionary<string, string> promptValues);
 }

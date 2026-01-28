@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.Domain", "CBTW.Domain\CBTW.Domain.csproj", "{B1408C18-E3D5-4FE2-BD1E-25401BB3CB6D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API.Abstractions", "CBTW.API.Abstractions\CBTW.API.Abstractions.csproj", "{7C278F0F-6D59-426C-92A4-005C9B2E49B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API", "CBTW.API\CBTW.API.csproj", "{FE985239-0E77-4C5F-9BEF-E6EFD6C79F28}"
@@ -9,14 +7,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD8F5CF9-18FA-441C-AC2A-F3068B53FF7D}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yaml = docker-compose.yaml
-		docker-compose.override.yaml = docker-compose.override.yaml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API.Services", "CBTW.API.Services\CBTW.API.Services.csproj", "{0DE90318-71D5-49EA-89C3-485BD05AA8DC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{70A1188B-30CE-4E69-83EE-F95839968140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.Services.Tests", "CBTW.Services.Tests\CBTW.Services.Tests.csproj", "{55059474-D497-4871-AA22-C7DEA112962C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API.Services.Tests", "CBTW.API.Services.Tests\CBTW.API.Services.Tests.csproj", "{55059474-D497-4871-AA22-C7DEA112962C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBTW.API.Gateway", "CBTW.API.Gateway\CBTW.API.Gateway.csproj", "{EE7EF579-5FF6-4A62-ABE8-7A9F38FEFDD2}"
 EndProject
@@ -40,10 +37,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B1408C18-E3D5-4FE2-BD1E-25401BB3CB6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B1408C18-E3D5-4FE2-BD1E-25401BB3CB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B1408C18-E3D5-4FE2-BD1E-25401BB3CB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B1408C18-E3D5-4FE2-BD1E-25401BB3CB6D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C278F0F-6D59-426C-92A4-005C9B2E49B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C278F0F-6D59-426C-92A4-005C9B2E49B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C278F0F-6D59-426C-92A4-005C9B2E49B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
