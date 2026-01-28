@@ -20,8 +20,8 @@ public class BookInfoRepository(IConfiguration config) : IBookInfoRepository
         var request = new GetBookInfoRequest(input);
         var uri = new Uri("bookinfo/searchbookinfo", UriKind.Relative);
         var response = await _httpClient.PostAsync(uri, JsonContent.Create(request));
-
         var responseContent = await response.EnsureSuccessStatusCode().Content.ReadAsStringAsync();
+
         var bookInfo = JsonConvert.DeserializeObject<GetBookInfoResponse>(responseContent);
         bookInfo?.BookInfos.ToList().ForEach(b => b.Explanation = bookInfo.MatchReason);
 

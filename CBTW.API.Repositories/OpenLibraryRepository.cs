@@ -17,14 +17,10 @@ public class OpenLibraryRepository(IConfiguration config) : IOpenLibraryReposito
 
     public async Task<BookInfoRespose> GetBookInfoAsync(string searchString, IEnumerable<string> fields)
     {
-        var uri = new Uri(string.Concat(
-            "search.json?q=", Uri.EscapeDataString(searchString),
-            "&fields=", Uri.EscapeDataString(string.Join(',', fields))),
-            UriKind.Relative);
+        var uri = new Uri(string.Concat("search.json?", searchString, "&fields=", string.Join(',', fields)), UriKind.Relative);
         var response = await _httpClient.GetAsync(uri);
         var responseContent = await response.EnsureSuccessStatusCode().Content.ReadAsStringAsync();
         var searchResult = JsonConvert.DeserializeObject<OpenLibrarySearchResult>(responseContent);
-
         return new BookInfoRespose
         {
             BookInfos = searchResult.Docs.Select(d => new BookInfo
