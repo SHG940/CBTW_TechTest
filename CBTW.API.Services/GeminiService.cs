@@ -1,4 +1,3 @@
-using CBTW.API.Abstractions.Dtos.Requests;
 using CBTW.API.Abstractions.Dtos.Responses;
 using CBTW.API.Abstractions.Repositories;
 using CBTW.API.Abstractions.Services;
@@ -27,14 +26,14 @@ Input: {{text}}
         _openLibraryService = openLibraryService;
     }
     
-    public async Task<AIServiceResponse> CallAsync(AIServiceRequest request)
+    public async Task<SearchBookInfoResponse> CallAsync(Dictionary<string, string> promptValues)
     {
-        var prompt = AiServiceUtils.ReplaceValues(BasePrompt, request.PropmtValues);
+        var prompt = AiServiceUtils.ReplaceValues(BasePrompt, promptValues);
         var bookKeyData = await _geminiRepository.ExtractInfoAsync(prompt);
         var bookInfosFound = await _openLibraryService.GetBookInfoAsync(bookKeyData);
         var bookInfo = bookInfosFound.BookInfo.FirstOrDefault();
         
-        return new AIServiceResponse
+        return new SearchBookInfoResponse
         {
             InputPropmpt =  prompt,
             BookInfo = bookInfo,

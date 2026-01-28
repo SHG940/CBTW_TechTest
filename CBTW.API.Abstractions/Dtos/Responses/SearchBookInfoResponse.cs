@@ -1,6 +1,6 @@
 namespace CBTW.API.Abstractions.Dtos.Responses;
 
-public class AIServiceResponse
+public class SearchBookInfoResponse
 {
     public string InputPropmpt { get; set; }
 
